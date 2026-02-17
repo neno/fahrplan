@@ -13,8 +13,10 @@ A PWA clone of the BLS Lake Cruise timetable for Lake Thun and Lake Brienz.
 ## 🛠 Tech Stack
 
 * **Monorepo:** Turborepo
-* **Frontend:** React (Vite) + Tailwind CSS
-* **Component Library:** ShadCN UI (built in `packages/ui` and documented via **Storybook**)
+* **JS Runtime:** Bun (instead of Node.js) for the Web app and the Component Library with Storybook
+* **Linting:** Use Biome (instead of Eslint and Prettier) for custom apps and custom packages
+* **Web App (Frontend):** React (Vite) + Tailwind CSS using Bun instead of Node.js
+* **Component Library:** ShadCN (built in `packages/ui` and documented via **Storybook**) - also use Bun instead of Node.js
 * **State Management:** TanStack Query (React Query)
 * **Backend:** Serverless Functions (Vercel/Netlify)
 * **PWA:** `vite-plugin-pwa` (Workbox)

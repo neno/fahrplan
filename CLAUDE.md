@@ -66,7 +66,6 @@ A PWA clone of the BLS Lake Cruise timetable for Lake Thun and Lake Brienz.
 * [ ] **Storybook:**: Add components to Storybook as the main UI package. Test variants using Playwright
 
 * Build `SearchForm` component (Combobox for piers, Date/Time pickers).
-* Build `SearchForm` component (Combobox for piers, Date/Time pickers).
 * Build `ConnectionCard` (Showing departure, arrival, duration, and vessel icon).
 * Build `PassList` (Accordion for intermediate stops).
 

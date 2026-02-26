@@ -57,37 +57,29 @@ A PWA clone of the BLS Lake Cruise timetable for Lake Thun and Lake Brienz.
 
 ## 🏃 Sprint 1: Foundation & UI System
 
-**Focus: Design System and Data Proxy**
+**Focus: Basic App with Component System**
 
 * [x] **Setup Monorepo:** Initialize Turborepo with `apps/web` and `packages/ui`.
-* [ ] **Figma:** Adapt design in Figma, so it can be used with Figma MCP for the export.
-* [ ] **Design Tokens:** Export Figma colors/spacing to Tailwind config in `packages/ui`.
-* [ ] **ShadCN:** We would like to replace the code of the Figma components with ShadCN. How can we do that? Can we do it with Code Connect?
-* [ ] **Storybook:**: Add components to Storybook as the main UI package. Test variants using Playwright
-
-* Build `SearchForm` component (Combobox for piers, Date/Time pickers).
-* Build `ConnectionCard` (Showing departure, arrival, duration, and vessel icon).
-* Build `PassList` (Accordion for intermediate stops).
-
-
-* [ ] **Serverless API:** Create a Node.js proxy to fetch from Transport API, filter for boat lines, and inject `vesselType` metadata.
+* [x] **ShadCN:** Install ShadCN with Tailwind 4
+* [x] **Storybook:**: Add components to Storybook as the main UI package.
 
 ---
 
-## 🏃 Sprint 2: Integration & PWA
+## 🏃 Sprint 2: Search Form
 
-**Focus: App logic and Offline capabilities**
+**Focus: Create a Search Form**
 
-* [ ] **Search Implementation:** Connect `apps/web` to the Serverless API.
-* [ ] **Quick-Time Selectors:** Add "Now", "+1h", "+2h", "+3h" shortcut buttons to the UI.
-* [ ] **PWA Configuration:**
-* Setup Manifest (icons, colors).
-* Configure Service Worker for "Network First" caching on API calls.
-* Implement "Offline Mode" banner when no network is detected.
+* [ ] **Create a Search Form Component:** Create a search form component and import it into the homepage.
+* [ ] **Create a Typeahead Component:** Create a typeahead component using ShadCN's combobox component and import it into Search Form component. It will be used for "form" and "to" piers.
+* [ ] **Add Date/Picker to Search Form:** Add ShadCN's Date Picker component and import it
+Search form contains:
+    * 2 typeaheads for piers "from" and "to" using the Combobox component. As the user starts typing in to the field It will fetch the piers names from the api and display the results dynamically in a ShadCN combobox component.
+    * Date picker.
+    * Time picker either for departure or arrival. The user can check departure or arrival above the time selection.
+    Time selection 
 
+* [ ] **Setup Monorepo:** Initialize Turborepo with `apps/web` and `packages/ui`.
 
-* [ ] **Installation Flow:** Add a custom "Install App" prompt for iOS/Android.
-* [ ] **Pull-to-Refresh:** Implement refresh logic for live updates.
 
 ---
 

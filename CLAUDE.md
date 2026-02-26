@@ -59,9 +59,13 @@ A PWA clone of the BLS Lake Cruise timetable for Lake Thun and Lake Brienz.
 
 **Focus: Design System and Data Proxy**
 
-* [ ] **Setup Monorepo:** Initialize Turborepo with `apps/web` and `packages/ui`.
+* [x] **Setup Monorepo:** Initialize Turborepo with `apps/web` and `packages/ui`.
+* [ ] **Figma:** Adapt design in Figma, so it can be used with Figma MCP for the export.
 * [ ] **Design Tokens:** Export Figma colors/spacing to Tailwind config in `packages/ui`.
-* [ ] **ShadCN + Storybook:**
+* [ ] **ShadCN:** We would like to replace the code of the Figma components with ShadCN. How can we do that? Can we do it with Code Connect?
+* [ ] **Storybook:**: Add components to Storybook as the main UI package. Test variants using Playwright
+
+* Build `SearchForm` component (Combobox for piers, Date/Time pickers).
 * Build `SearchForm` component (Combobox for piers, Date/Time pickers).
 * Build `ConnectionCard` (Showing departure, arrival, duration, and vessel icon).
 * Build `PassList` (Accordion for intermediate stops).
